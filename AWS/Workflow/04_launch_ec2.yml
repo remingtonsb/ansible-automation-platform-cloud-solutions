@@ -11,7 +11,7 @@
         security_group: "{{ security_group.group_id  }}"
         count: 1
         wait: yes
-        aws_region: "ap-south-1"
+        aws_region: "ap-southeast-1"
         network:
           assign_public_ip: true
         image_id: "{{ ami }}"
