@@ -13,6 +13,12 @@
       ansible.builtin.set_stats:
         data:
           vpc: "{{vpc}}"
+
+    - name: Create Internet gateway
+      amazon.aws.ec2_vpc_igw:
+        vpc_id: "{{ vpc.vpc.id }}"
+        state: present
+      register: igw
   
     
          
