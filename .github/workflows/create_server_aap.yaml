@@ -1,5 +1,5 @@
-name: Create AWS Server
-run-name: Create AWS Server
+name: Create Server via AAP
+run-name: Create Server via AAP
 
 on:
   push:
