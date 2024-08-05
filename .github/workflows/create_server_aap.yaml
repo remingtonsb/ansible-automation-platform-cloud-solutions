@@ -18,6 +18,6 @@ jobs:
           controller_verify_ssl: true
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
-          type: workflow_job_template
           resource_name: aws-workflow-job-template
+          resource_type: workflow_job_template
           
