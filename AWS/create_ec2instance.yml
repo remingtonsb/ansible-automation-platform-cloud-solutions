@@ -1,5 +1,5 @@
 ---
-- name: Creating an EC2 Instance with Creating a VPC and Subnet Id
+- name: Creating an EC2 Instance with Creating a VPC and Subnet Id 1
   hosts: localhost
   tasks:
     - name: Create a new VPC 
