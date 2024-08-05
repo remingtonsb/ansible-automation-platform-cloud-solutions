@@ -14,28 +14,14 @@
         data:
           vpc: "{{vpc}}"
 
+  
     - name: Change the VPC the gateway is attached to
       amazon.aws.ec2_vpc_igw:
-        internet_gateway_id: igw-03a6c22d6b263b625
+        internet_gateway_id: "{{igw.gateway.id}}"
         vpc_id: "{{vpc.vpc.id}}"
+        force_attach: true
         state: present
       register: igw
-
-    - name: Create gateway route table
-      amazon.aws.ec2_vpc_route_table:
-        vpc_id: "{{vpc.vpc.id}}"
-        tags:
-          Name: Gateway route table
-        gateway_id: "igw-0c903b08033565411"
-      register: gateway_route_table
-
-#    - name: Change the VPC the gateway is attached to
-#      amazon.aws.ec2_vpc_igw:
-#        internet_gateway_id: "{{igw.gateway_id}}"
-#        vpc_id: "{{vpc.vpc_id}}"
-#        force_attach: true
-#        state: present
-#      register: igw
   
     
          
