@@ -19,4 +19,4 @@ jobs:
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
           controller_verify_ssl: "false"
           resource_type: workflow_job_template
-          resource_name: 19
+          resource_id: 19
