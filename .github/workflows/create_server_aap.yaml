@@ -14,6 +14,7 @@ jobs:
     steps:
       - name: "Integrate with Ansible Automation Platform"
         uses: fitbeard/action-trigger-awx@v24.2.0
+        id: example_id
         with:
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_verify_ssl: false
