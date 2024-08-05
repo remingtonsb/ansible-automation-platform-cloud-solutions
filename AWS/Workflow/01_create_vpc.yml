@@ -21,6 +21,14 @@
         state: present
       register: igw
 
+    - name: Create gateway route table
+      amazon.aws.ec2_vpc_route_table:
+        vpc_id: "{{vpc.vpc.id}}"
+        tags:
+          Name: Gateway route table
+        gateway_id: "{{ vpc_igw.gateway_id }}"
+      register: gateway_route_table
+
 #    - name: Change the VPC the gateway is attached to
 #      amazon.aws.ec2_vpc_igw:
 #        internet_gateway_id: "{{igw.gateway_id}}"
