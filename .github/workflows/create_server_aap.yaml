@@ -15,8 +15,9 @@ jobs:
       - name: "Test AWX: Simple job template without waiting"
         uses: fitbeard/action-trigger-awx@v24.2.0
         with:
+          controller_verify_ssl: false
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
-          controller_verify_ssl: "false"
           resource_type: job_template
           resource_name: AWS_LAUNCH_EC2
+          
