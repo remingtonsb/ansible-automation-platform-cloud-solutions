@@ -12,7 +12,7 @@ jobs:
   create_server:
     runs-on: ubuntu-latest
     steps:
-      - name: "Integrate with Ansible Automation Platform: Simple workflow template"
+      - name: "Integrate with Ansible Automation Platform"
         uses: fitbeard/action-trigger-awx@v24.2.0
         with:
           controller_host: ${{ secrets.CONTROLLER_HOST }}
