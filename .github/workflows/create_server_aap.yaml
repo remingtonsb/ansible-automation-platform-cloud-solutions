@@ -18,6 +18,6 @@ jobs:
           controller_verify_ssl: false
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
-          resource_type: job_template
-          resource_name: AWS_LAUNCH_EC2
+          resource_type: workflow_job_template
+          resource_name: aws-workflow-job-template
           
