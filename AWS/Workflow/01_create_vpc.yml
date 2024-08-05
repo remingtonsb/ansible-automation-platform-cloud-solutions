@@ -13,15 +13,6 @@
       ansible.builtin.set_stats:
         data:
           vpc: "{{vpc}}"
-
-  
-    - name: Change the VPC the gateway is attached to
-      amazon.aws.ec2_vpc_igw:
-        internet_gateway_id: "igw-03a6c22d6b263b625"
-        vpc_id: "{{vpc.vpc.id}}"
-        force_attach: true
-        state: present
-      register: igw
   
     
          
