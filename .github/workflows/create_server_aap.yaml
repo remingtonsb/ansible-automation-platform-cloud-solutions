@@ -21,3 +21,4 @@ jobs:
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
           resource_type: workflow_job_template
           resource_name: AWS_WORKFLOW_SANTANDER
+          monitor: "false"
