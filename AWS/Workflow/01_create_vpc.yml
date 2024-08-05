@@ -20,6 +20,19 @@
         region: "{{ region }}"
         state: present
       register: igw
+
+    - name: Set up public subnet route table
+      amazon.aws.ec2_vpc_route_table:
+        vpc_id: "{{ vpc.vpc.id }}"
+        region: "{{ region }}"
+        tags:
+          Name: Public
+        routes:
+          - dest: 0.0.0.0/0
+            gateway_id: "{{ igw.gateway_id }}"
+          - dest: ::/0
+            gateway_id: "{{ igw.gateway_id }}"
+      register: public_route_table
   
     
          
