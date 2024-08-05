@@ -15,7 +15,7 @@ jobs:
       - name: "Test AWX: Simple job template without waiting"
         uses: fitbeard/action-trigger-awx@v24.2.0
         with:
-          controller_verify_ssl: false
+          controller_verify_ssl: true
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
           resource_type: workflow_job_template
