@@ -26,7 +26,7 @@
         vpc_id: "{{vpc.vpc.id}}"
         tags:
           Name: Gateway route table
-        gateway_id: "{{ igw.gateway.id }}"
+        gateway_id: "{{ igw.id }}"
       register: gateway_route_table
 
 #    - name: Change the VPC the gateway is attached to
