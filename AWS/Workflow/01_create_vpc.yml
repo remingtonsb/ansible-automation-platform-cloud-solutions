@@ -8,9 +8,19 @@
         cidr_block: "{{ cidr_block }}"
         region: "{{ region }}"
       register: vpc
-  
+      
     - name: "Artifact the VPC vars"
       ansible.builtin.set_stats:
         data:
           vpc: "{{vpc}}"
+
+    - name: Change the VPC the gateway is attached to
+      amazon.aws.ec2_vpc_igw:
+        internet_gateway_id: "{{igw.gateway_id}}"
+        vpc_id: "{{vpc.vpc_id}}"
+        force_attach: true
+        state: present
+      register: igw
+  
+    
          
