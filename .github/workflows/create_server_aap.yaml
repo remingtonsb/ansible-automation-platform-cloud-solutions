@@ -12,13 +12,12 @@ jobs:
   create_server:
     runs-on: ubuntu-latest
     steps:
-      - name: "Integrate with Ansible Automation Platform"
+      - name: "Test AWX: Simple job template without waiting"
         uses: fitbeard/action-trigger-awx@v24.2.0
-        id: example_id
         with:
           controller_host: ${{ secrets.CONTROLLER_HOST }}
-          controller_verify_ssl: false
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
+          controller_verify_ssl: "false"
           resource_type: workflow_job_template
           resource_name: AWS_WORKFLOW_SANTANDER
           monitor: "false"
