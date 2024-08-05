@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Test AWX: Simple job template without waiting"
-        uses: fitbeard/action-trigger-awx@latest
+        uses: fitbeard/action-trigger-awx@24.2.0
         with:
           controller_verify_ssl: false
           controller_host: ${{ secrets.CONTROLLER_HOST }}
