@@ -1,5 +1,5 @@
 name: Create Server via AAP
-run-name: Create Server via AAP 5
+run-name: Create Server via AAP 6
 
 on:
   push:
