@@ -16,7 +16,7 @@ jobs:
         uses: fitbeard/action-trigger-awx@v24.2.0
         with:
           controller_host: ${{ secrets.CONTROLLER_HOST }}
-          controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
           controller_verify_ssl: false
+          controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}  
           resource_type: workflow_job_template
           resource_name: ${{ secrets.WORKFLOW_NAME }}
