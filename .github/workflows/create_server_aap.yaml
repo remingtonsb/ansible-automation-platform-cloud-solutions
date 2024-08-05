@@ -17,5 +17,6 @@ jobs:
         with:
           controller_host: ${{ secrets.CONTROLLER_HOST }}
           controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
+          controller_verify_ssl: false
           resource_type: workflow_job_template
           resource_name: ${{ secrets.WORKFLOW_NAME }}
