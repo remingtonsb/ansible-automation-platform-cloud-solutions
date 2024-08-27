@@ -1,4 +1,4 @@
-name: Java with Nexus Repository
+name: Build app and create infraestructure
 
 on: [push]
 
@@ -26,3 +26,14 @@ jobs:
         coordinates: groupId=com.example artifactId=app version=1.0.0
         assets: extension=jar
         filename: target/myapp_server-0.0.1-SNAPSHOT.jar
+
+######
+    - name: "Test AWX: Simple job template without waiting"
+      uses: fitbeard/action-trigger-awx@v24.2.0
+      with:
+        controller_verify_ssl: false
+        controller_host: ${{ secrets.CONTROLLER_HOST }}
+        controller_oauth_token: ${{ secrets.CONTROLLER_OAUTH_TOKEN }}
+        resource_type: workflow_job_template
+        resource_name: aws-workflow-job-template
+          
