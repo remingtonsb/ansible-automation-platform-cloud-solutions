@@ -25,4 +25,4 @@ jobs:
         repository: maven-releases
         coordinates: groupId=com.example artifactId=app version=1.0.0
         assets: extension=jar
-        filename: .JAVA/target/app-1.0.0.jar
+        filename: JAVA/target/app-1.0.0.jar
