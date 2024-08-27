@@ -20,7 +20,7 @@ jobs:
       with:
         serverUrl: http://ec2-3-12-85-240.us-east-2.compute.amazonaws.com:8081/
         username: admin
-        password: ${{ secrets.password }}
+        password: ${{ secrets.nexuspassword }}
         format: maven2
         repository: maven-releases
         coordinates: groupId=com.example artifactId=app version=1.0.0
