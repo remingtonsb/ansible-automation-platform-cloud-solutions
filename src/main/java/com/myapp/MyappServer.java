@@ -45,7 +45,7 @@ public class MyappServer extends WebMvcConfigurerAdapter
 
     private ApiInfo generateApiInfo()
     {
-        return new ApiInfo("myapp Server", "This service is to experiment with Spring Boot with .", "Version 1.0 - mw",
+        return new ApiInfo("myapp Server", "This service is to experiment with Spring Boot with CIELO .", "Version 1.0 - mw",
             "urn:tos", "contact@alexmanrique.com", "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
     }
 }
