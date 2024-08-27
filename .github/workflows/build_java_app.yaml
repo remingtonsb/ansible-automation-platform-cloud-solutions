@@ -28,6 +28,11 @@ jobs:
         filename: target/myapp_server-0.0.1-SNAPSHOT.jar
 
 ######
+  deploy_aws:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+
     - name: "Test AWX: Simple job template without waiting"
       uses: fitbeard/action-trigger-awx@v24.2.0
       with:
